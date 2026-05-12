@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tidy-to-plaintext"
+description = "Turns selected columns of a spreadsheet into a set of plain text files for corpus linguistic tools."
+readme = "README.md"
+requires-python = ">=3.10.0"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+authors = [
+  {name = "Sam Hames"},
+]
+classifiers=[
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+]
+dependencies = [
+  "openpyxl",
+  "jupyterlite-core",
+  "jupyterlab",
+  "jupyterlite-pyodide-kernel"
+]
+version="0.0.1dev1"
+
+[project.optional-dependencies]
+dev = ["pip-tools", "nbstripout", "black", "jupyter"]
+
+[project.urls]
+Repository = "https://github.com/AustralianTextAnalyticsPlatform/tidy-to-plaintext"
+Homepage = "https://github.com/AustralianTextAnalyticsPlatform/tidy-to-plaintext"
